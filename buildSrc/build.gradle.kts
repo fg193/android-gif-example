@@ -1,5 +1,7 @@
 repositories {
-  gradlePluginPortal()
+  maven {
+    setUrl("https://maven.aliyun.com/repository/public/")
+  }
 }
 
 plugins {

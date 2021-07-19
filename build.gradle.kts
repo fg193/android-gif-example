@@ -6,8 +6,15 @@ buildscript {
   rootProject.extra["ci"] = rootProject.hasProperty("ci")
 
   repositories {
-    google()
-    gradlePluginPortal()
+    maven {
+      setUrl("https://maven.aliyun.com/repository/public/")
+    }
+    maven {
+      setUrl("https://maven.aliyun.com/repository/google/")
+    }
+    maven {
+      setUrl("https://maven.aliyun.com/repository/gradle-plugin/")
+    }
   }
 
   dependencies {
@@ -24,8 +31,9 @@ buildscript {
 
 allprojects {
   repositories {
-    google()
-    gradlePluginPortal()
+    maven {
+      setUrl("https://maven.aliyun.com/repository/public/")
+    }
   }
 
   configurations.all {
